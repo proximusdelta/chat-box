@@ -14,36 +14,22 @@ body {
   background: linear-gradient(#EEEEFF, #C8C7FF);
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+.homepage-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10vh;
 }
+.homepage-image {
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.homepage
 
-.background-image {
-    position: relative;
-    background-image: url('Know right.png.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-}
-
-.chat-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    z-index: 10; /* Ensure it's above other content */
-}
-
-.chat-toggle:hover {
-    background-color: #45a049;
-}
 
 #chatbot-toggler {
   position: fixed;
