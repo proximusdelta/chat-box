@@ -14,6 +14,7 @@ body {
   background: linear-gradient(#EEEEFF, #C8C7FF);
 }
 
+/* Homepage content - keeps it centered */
 .homepage-content {
   display: flex;
   flex-direction: column;
@@ -22,18 +23,20 @@ body {
   text-align: center;
   margin-top: 10vh;
 }
+
+/* Homepage image style */
 .homepage-image {
   max-width: 50%;
   height: auto;
   border-radius: 10px;
   margin-bottom: 20px;
 }
-.homepage
 
+/* Chatbot toggle button positioned at bottom-right */
 #chatbot-toggler {
   position: fixed;
-  bottom: 30px;
-  right: 35px;
+  bottom: 30px; /* Keeps it at the bottom */
+  right: 35px;  /* Keeps it at the right */
   border: none;
   height: 50px;
   width: 50px;
@@ -47,9 +50,48 @@ body {
   transition: all 0.2s ease;
 }
 
+/* Toggle button rotation when chat is opened */
 body.show-chatbot #chatbot-toggler {
   transform: rotate(90deg);
 }
+
+#chatbot-toggler span {
+  color: #fff;
+  position: absolute;
+}
+
+#chatbot-toggler span:last-child,
+body.show-chatbot #chatbot-toggler span:first-child {
+  opacity: 0;
+}
+
+body.show-chatbot #chatbot-toggler span:last-child {
+  opacity: 1;
+}
+
+/* Chatbot popup centered and responsive */
+.chatbot-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.2); /* Center the popup */
+  width: 420px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 15px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+  transition: all 0.1s ease;
+}
+
+body.show-chatbot .chatbot-popup {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
 
 #chatbot-toggler span {
   color: #fff;
