@@ -13,31 +13,38 @@ body {
   min-height: 100vh;
   background: linear-gradient(#EEEEFF, #C8C7FF);
 }
-/* Fullscreen image background */
-.fullscreen-bg {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background: url('Know right.png') no-repeat center center/cover;
-  margin: 0;
-  padding: 0;
-  z-index: 0; /* Ensure the image is behind */
-}
-/* Text styling at the bottom-left corner */
-.homepage-text {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: white;
-  font-size: 18px;
-  font-family: Arial, sans-serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
-.homepage
+.background-image {
+    position: relative;
+    background-image: url('Know right.png.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
 
+.chat-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 10; /* Ensure it's above other content */
+}
 
-/* Chatbot Toggler */
+.chat-toggle:hover {
+    background-color: #45a049;
+}
+
 #chatbot-toggler {
   position: fixed;
   bottom: 30px;
@@ -53,9 +60,7 @@ body {
   background: #5350C4;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
-  z-index: 9999;  /* Ensure this is above everything else */
 }
-
 
 body.show-chatbot #chatbot-toggler {
   transform: rotate(90deg);
