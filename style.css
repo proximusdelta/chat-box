@@ -14,27 +14,18 @@ body {
   background: linear-gradient(#EEEEFF, #C8C7FF);
 }
 
-.homepage-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 10vh;
-}
 .homepage-image {
-  max-width: 50%%;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
   margin-bottom: 20px;
 }
 .homepage
 
-
 #chatbot-toggler {
   position: fixed;
-  bottom: 30px; /* Position at the bottom */
-  right: 35px;  /* Position to the right */
+  bottom: 30px;
+  right: 35px;
   border: none;
   height: 50px;
   width: 50px;
@@ -68,15 +59,16 @@ body.show-chatbot #chatbot-toggler span:last-child {
 
 .chatbot-popup {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.2); /* Center and scale the popup */
+  right: 35px;
+  bottom: 90px;
   width: 420px;
   overflow: hidden;
   background: #fff;
   border-radius: 15px;
   opacity: 0;
   pointer-events: none;
+  transform: scale(0.2);
+  transform-origin: bottom right;
   box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
     0 32px 64px -48px rgba(0, 0, 0, 0.5);
   transition: all 0.1s ease;
@@ -85,9 +77,8 @@ body.show-chatbot #chatbot-toggler span:last-child {
 body.show-chatbot .chatbot-popup {
   opacity: 1;
   pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
 }
-
 
 .chat-header {
   display: flex;
