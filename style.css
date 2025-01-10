@@ -14,6 +14,14 @@ body {
   background: linear-gradient(#EEEEFF, #C8C7FF);
 }
 
+.homepage-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10vh;
+}
 .homepage-image {
   max-width: 50%;
   height: auto;
