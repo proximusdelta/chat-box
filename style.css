@@ -52,8 +52,13 @@ body {
   background: #5350C4;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
-  z-index: 9999;  /* This ensures the button is on top */
+  z-index: 999999;  /* Ensure this value is high enough */
 }
+
+img, .other-elements {
+  z-index: 1;  /* Make sure the image or other elements have a lower z-index */
+}
+
 
 
 body.show-chatbot #chatbot-toggler {
