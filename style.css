@@ -33,8 +33,9 @@ body {
 
 #chatbot-toggler {
   position: fixed;
-  bottom: 30px;
-  right: 35px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Adjust for the size of the button */
   border: none;
   height: 50px;
   width: 50px;
@@ -49,7 +50,7 @@ body {
 }
 
 body.show-chatbot #chatbot-toggler {
-  transform: rotate(90deg);
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 #chatbot-toggler span {
@@ -68,16 +69,15 @@ body.show-chatbot #chatbot-toggler span:last-child {
 
 .chatbot-popup {
   position: fixed;
-  right: 35px;
-  bottom: 90px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.2); /* Center and scale the popup */
   width: 420px;
   overflow: hidden;
   background: #fff;
   border-radius: 15px;
   opacity: 0;
   pointer-events: none;
-  transform: scale(0.2);
-  transform-origin: bottom right;
   box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
     0 32px 64px -48px rgba(0, 0, 0, 0.5);
   transition: all 0.1s ease;
@@ -86,8 +86,9 @@ body.show-chatbot #chatbot-toggler span:last-child {
 body.show-chatbot .chatbot-popup {
   opacity: 1;
   pointer-events: auto;
-  transform: scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
+
 
 .chat-header {
   display: flex;
