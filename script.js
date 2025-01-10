@@ -159,6 +159,42 @@ fileCancelButton.addEventListener("click", () => {
   fileUploadWrapper.classList.remove("file-uploaded");
 });
 
+// Function to toggle the chat box visibility
+function toggleChat() {
+    const chatBox = document.getElementById("chatBox");
+    if (chatBox.style.display === "block") {
+        chatBox.style.display = "none";
+    } else {
+        chatBox.style.display = "block";
+    }
+}
+
+// Function to handle the chatbot's form submission (you can expand this based on your chatbot's functionality)
+function handleChatFormSubmit(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    // Get the user input
+    const userInput = document.getElementById("userInput").value;
+    if (userInput.trim() !== "") {
+        // Send the user input to the chatbot (e.g., an API or processing function)
+        // You can add functionality here to handle the user input
+
+        // Optionally, clear the input after submission
+        document.getElementById("userInput").value = "";
+    }
+}
+
+// Initialize the chat button functionality on page load
+window.onload = function() {
+    // Event listener for the toggle button
+    const toggleButton = document.getElementById("toggleButton");
+    toggleButton.addEventListener("click", toggleChat);
+
+    // Event listener for the chat form submission
+    const chatForm = document.getElementById("chatForm");
+    chatForm.addEventListener("submit", handleChatFormSubmit);
+};
+
 // Initialize emoji picker and handle emoji selection
 const picker = new EmojiMart.Picker({
   theme: "light",
